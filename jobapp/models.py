@@ -30,7 +30,7 @@ class Job(models.Model):
     location = models.CharField(max_length=300)
     job_type = models.CharField(choices=JOB_TYPE, max_length=1)
     category = models.ForeignKey(
-        Category, related_name='Category', on_delete=models.CASCADE, null=True, blank=True)
+        Category, related_name='Category', on_delete=models.CASCADE)
     salary = models.CharField(max_length=30, blank=True)
     company_name = models.CharField(max_length=300)
     company_description = RichTextField(blank=True, null=True)
